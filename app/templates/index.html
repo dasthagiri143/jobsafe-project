@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JobSafe - Fake Job Detector</title>
+</head>
+<body>
+    <h2>Enter Job Ad Details</h2>
+    <form action="/predict" method="post">
+        <label>Title:</label><br><input type="text" name="title"><br>
+        <label>Location:</label><br><input type="text" name="location"><br>
+        <label>Company Profile:</label><br><input type="text" name="company_profile"><br>
+        <label>Description:</label><br><input type="text" name="description"><br>
+        <label>Requirements:</label><br><input type="text" name="requirements"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
